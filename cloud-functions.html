@@ -1,0 +1,146 @@
+<script type="text/x-red" data-template-name="gcp-cloud-functions-http-in">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="gcp-cloud-functions-http-in"></script>
+
+<script type="text/x-red" data-template-name="gcp-cloud-functions-topic-in">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="gcp-cloud-functions-topic-in"></script>
+
+<script type="text/x-red" data-template-name="gcp-cloud-functions-bucket-in">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="gcp-cloud-functions-bucket-in"></script>
+
+<script type="text/x-red" data-template-name="gcp-cloud-functions-topic-out">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="gcp-cloud-functions-topic-out"></script>
+
+<script type="text/x-red" data-template-name="gcp-cloud-functions-bucket-out">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="gcp-cloud-functions-bucket-out"></script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('gcp-cloud-functions-http-in', {
+        category: 'google cloud-input',
+        color: '#c0deed',
+        defaults: {
+            name: {
+                value: ''
+            }
+        },
+        inputs: 0,
+        outputs: 1,
+        icon: 'cloud-functions-blue.svg',
+        paletteLabel: 'func http in',
+        label: function () {
+            return this.name || 'func http in';
+        },
+        labelStyle: function () {
+            return this.name ? 'node_label_italic' : '';
+        }
+    });
+
+    RED.nodes.registerType('gcp-cloud-functions-topic-in', {
+        category: 'google cloud-input',
+        color: '#c0deed',
+        defaults: {
+            name: {
+                value: ''
+            }
+        },
+        inputs: 0,
+        outputs: 1,
+        icon: 'cloud-functions-blue.svg',
+        paletteLabel: 'func topic in',
+        label: function () {
+            return this.name || 'func topic in';
+        },
+        labelStyle: function () {
+            return this.name ? 'node_label_italic' : '';
+        }
+    });
+
+    RED.nodes.registerType('gcp-cloud-functions-bucket-in', {
+        category: 'google cloud-input',
+        color: '#c0deed',
+        defaults: {
+            name: {
+                value: ''
+            }
+        },
+        inputs: 0,
+        outputs: 1,
+        icon: 'cloud-functions-blue.svg',
+        paletteLabel: 'func bucket in',
+        label: function () {
+            return this.name || 'func bucket in';
+        },
+        labelStyle: function () {
+            return this.name ? 'node_label_italic' : '';
+        }
+    });
+
+    RED.nodes.registerType('gcp-cloud-functions-topic-out', {
+        category: 'google cloud-output',
+        color: '#c0deed',
+        defaults: {
+            name: {
+                value: ''
+            }
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: 'cloud-functions-blue.svg',
+        paletteLabel: 'func topic out',
+        label: function () {
+            return this.name || 'func topic out';
+        },
+        labelStyle: function () {
+            return this.name ? 'node_label_italic' : '';
+        }
+    });
+
+    RED.nodes.registerType('gcp-cloud-functions-bucket-out', {
+        category: 'google cloud-output',
+        color: '#c0deed',
+        defaults: {
+            name: {
+                value: ''
+            }
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: 'cloud-functions-blue.svg',
+        paletteLabel: 'func bucket out',
+        label: function () {
+            return this.name || 'func bucket out';
+        },
+        labelStyle: function () {
+            return this.name ? 'node_label_italic' : '';
+        }
+    });
+</script>

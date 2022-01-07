@@ -1,0 +1,14 @@
+{
+  "name": "node-red-contrib-google-cloud-functions",
+  "version": "0.0.0",
+  "main": "cloud-functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "node-red": {
+    "nodes": {
+      "cloud-functions": "cloud-functions.js"
+    }
+  },
+  "dependencies": {}
+}
