@@ -1,14 +1,16 @@
 {
-  "name": "node-red-contrib-google-cloud-functions",
+  "name": "@catfoxtech/node-red-contrib-google-cloud-functions",
   "version": "0.0.0",
   "main": "cloud-functions.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "keywords": [
+    "node-red"
+  ],
   "node-red": {
     "nodes": {
       "cloud-functions": "cloud-functions.js"
     }
   },
-  "dependencies": {}
+  "devDependencies": {
+    "node-red": "^2.2.2"
+  }
 }
